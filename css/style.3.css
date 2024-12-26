@@ -1,0 +1,146 @@
+/* 基本リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ヘッダー */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+#menubar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+}
+
+#menu li {
+    margin-left: 20px;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ハンバーガーメニュー */
+#menubar-mobile .nav {
+    display: none;
+}
+
+.drawer_open span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+#drawer_input:checked + .drawer_open span {
+    background-color: transparent;
+}
+
+#drawer_input:checked + .drawer_open span::before {
+    transform: rotate(-45deg);
+}
+
+#drawer_input:checked + .drawer_open span::after {
+    transform: rotate(45deg);
+}
+
+/* 画像ギャラリー */
+#main-latestwork-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.main-latestwork img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.work-genre, .work-title {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#main-images img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#footer-sub {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+    /* メニューのレイアウト変更 */
+    #menubar {
+        flex-direction: column;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    /* ギャラリーのカラム数を変更 */
+    #main-latestwork-images {
+        grid-template-columns: 1fr;
+    }
+
+    /* 画像のサイズ調整 */
+    #main-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ハンバーガーメニューの表示 */
+    #menubar-mobile .nav {
+        display: block;
+    }
+
+    #menubar {
+        display: none;
+    }
+
+    /* メニューがチェックされた時に表示 */
+    #drawer_input:checked + .drawer_open + #menubar {
+        display: block;
+    }
+}
+
+/* タブレット以上のスクリーン */
+@media screen and (min-width: 769px) {
+    #menubar-mobile {
+        display: none;
+    }
+}

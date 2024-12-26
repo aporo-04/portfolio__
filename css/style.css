@@ -1,0 +1,95 @@
+/* 全体のレイアウトを中央に寄せる */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直方向の中央寄せ */
+    align-items: center; /* 水平方向の中央寄せ */
+    min-height: 100vh; /* ビューポートの高さに合わせる */
+}
+
+/* ヘッダーの中央寄せ */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    width: 100%; /* ヘッダーを全幅に */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ロゴの画像 */
+#logo img {
+    width: 100px;
+}
+
+/* ナビゲーションメニュー */
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu li {
+    margin-left: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* メインコンテンツの中央寄せ */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央寄せ */
+    justify-content: center;
+    padding: 20px;
+    text-align: center; /* 文字も中央寄せ */
+}
+
+/* プロフィール画像 */
+#profile img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* スマホ用レスポンシブ設定 */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* 縦に並べる */
+        padding: 0 20px;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu li {
+        margin: 10px 0;
+    }
+
+    #logo img {
+        width: 80%; /* ロゴを縮小 */
+    }
+
+    #profile img {
+        max-width: 100%; /* 画像を横幅に合わせて調整 */
+    }
+
+    footer {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+}

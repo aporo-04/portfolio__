@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルなHTMLページ</title>
+</head>
+<body>
+    <header>
+        <h1>私のシンプルなページ</h1>
+    </header>
+    <main>
+        <p>これはHTMLで作成した非常に簡単なウェブページです。</p>
+        <p>以下はGoogleへのリンクです。</p>
+        <a href="https://www.google.co.jp" target="_blank">Googleを開く</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 私のウェブサイト</p>
+    </footer>
+</body>
+</html>
+
+
+<header>
+    <div id="menubar-mobile">
+        <div class="nav">
+
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+        
+            <!-- メニュー -->
+            <nav class="nav_content">
+              <ul class="nav_list">
+                <li class="nav_item"><a href="">home</a></li>
+                <li class="nav_item"><a href="">about me</a></li>
+                <li class="nav_item"><a href="">メニュー3</a></li>
+                <li class="nav_item"><a href="">メニュー4</a></li>
+              </ul>
+            </nav>
+       
+        </div>
+    </div>
+    <div id="menubar">
+        <div id="logo">
+            <img src="./img/header/atarashiilogo.PNG">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="">aboutme</a></li>
+                <li><a href="">movie</a></li>
+                <li><a href="">programming</a></li>
+                <li><a href="">design</a></li>
+            </ul>
+        </div>
+        <div id="contact">
+            <button>contact</button>
+        </div>
+    </div>
+    <div id="header-catch">
+        <div id="header-catch-img">ヘッダー画像</div>
+        <div id="header-catch-text">ヘッダーテキスト</div>
+    </div>
+</header>
